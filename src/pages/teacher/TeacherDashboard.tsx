@@ -139,9 +139,9 @@ const TeacherDashboard = () => {
             })}
           </div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 lg:grid-cols-1 gap-6">
             {/* Recent Requests */}
-            <div className="lg:col-span-2">
+            <div>
               <Card>
                 <CardHeader>
                   <CardTitle>Recent Student Requests</CardTitle>
@@ -180,34 +180,6 @@ const TeacherDashboard = () => {
                       </div>
                     ))}
                   </div>
-                </CardContent>
-              </Card>
-            </div>
-
-            {/* Upcoming Deadlines */}
-            <div>
-              <Card>
-                <CardHeader>
-                  <CardTitle>Upcoming Deadlines</CardTitle>
-                  <CardDescription>Project submission deadlines</CardDescription>
-                </CardHeader>
-                <CardContent>
-                  <div className="space-y-4">
-                    {upcomingDeadlines.map((deadline, index) => (
-                      <div key={index} className="p-3 border rounded-lg">
-                        <h5 className="font-medium text-foreground text-sm">{deadline.student}</h5>
-                        <p className="text-xs text-muted-foreground mb-2">{deadline.project}</p>
-                        <div className="flex items-center gap-1 text-xs text-destructive">
-                          <Calendar className="h-3 w-3" />
-                          <span>{deadline.deadline}</span>
-                        </div>
-                      </div>
-                    ))}
-                  </div>
-                  
-                  <Button className="w-full mt-4" variant="outline">
-                    View All Deadlines
-                  </Button>
                 </CardContent>
               </Card>
             </div>

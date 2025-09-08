@@ -23,12 +23,8 @@ const TeacherSidebar = ({ isOpen, onToggle }: SidebarProps) => {
   const location = useLocation();
   
   const menuItems = [
-    { icon: Home, label: "Dashboard", path: "/teacher/dashboard" },
-    { icon: ClipboardList, label: "Student Requests", path: "/teacher/requests" },
     { icon: Users, label: "List of Groups", path: "/teacher/groups" },
     { icon: UserCheck, label: "List of Students", path: "/teacher/students" },
-    { icon: FileText, label: "Projects", path: "/teacher/projects" },
-    { icon: Settings, label: "Account Settings", path: "/teacher/settings" },
   ];
 
   return (
@@ -49,7 +45,7 @@ const TeacherSidebar = ({ isOpen, onToggle }: SidebarProps) => {
       )}>
         {/* Header */}
         <div className="flex items-center justify-between p-4 border-b border-navy-light">
-          <h2 className="text-lg font-semibold">NextGen</h2>
+          <h2 className="text-lg font-semibold">EduChoice</h2>
           <Button
             variant="ghost"
             size="sm"
@@ -87,6 +83,14 @@ const TeacherSidebar = ({ isOpen, onToggle }: SidebarProps) => {
 
         {/* Footer */}
         <div className="p-4 border-t border-navy-light">
+          <Button
+            variant="ghost"
+            onClick={() => window.location.href = '/'}
+            className="w-full justify-start gap-3 h-11 text-navy-foreground hover:bg-navy-light mb-3"
+          >
+            <Settings className="h-5 w-5" />
+            Logout
+          </Button>
           <p className="text-xs text-navy-foreground/70 text-center">
             EduChoice Teacher Portal
           </p>

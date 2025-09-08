@@ -51,7 +51,7 @@ const StudentSidebar = ({ isOpen, onToggle }: SidebarProps) => {
       )}>
         {/* Header */}
         <div className="flex items-center justify-between p-4 border-b border-navy-light">
-          <h2 className="text-lg font-semibold">NextGen</h2>
+          <h2 className="text-lg font-semibold">EduChoice</h2>
           <Button
             variant="ghost"
             size="sm"
@@ -89,6 +89,14 @@ const StudentSidebar = ({ isOpen, onToggle }: SidebarProps) => {
 
         {/* Footer */}
         <div className="p-4 border-t border-navy-light">
+          <Button
+            variant="ghost"
+            onClick={() => window.location.href = '/'}
+            className="w-full justify-start gap-3 h-11 text-navy-foreground hover:bg-navy-light mb-3"
+          >
+            <Settings className="h-5 w-5" />
+            Logout
+          </Button>
           <p className="text-xs text-navy-foreground/70 text-center">
             EduChoice Student Portal
           </p>

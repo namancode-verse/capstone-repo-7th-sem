@@ -69,7 +69,7 @@ const StudentDashboard = () => {
             <div className="flex items-center justify-between">
               <div>
                 <h2 className="text-2xl font-bold text-foreground mb-2">
-                  Now, you can choose your own curriculum by your own, so start learning with NextGen
+                  Now, you can choose your own curriculum by your own, so start learning with EduChoice
                 </h2>
                 <p className="text-muted-foreground mb-4">
                   Customize your academic journey with our flexible course selection system
